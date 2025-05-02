@@ -1,5 +1,5 @@
 # address-curve
-Creating secure private keys using symmetric SHA3 hashing and Merkle trees
+Creating secure private keys using symmetric SHA3 hashing + Ed25519 and Merkle trees
 
 ## Process flow
 ```bash PrivateKey (64 bytes)
