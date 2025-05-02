@@ -17,6 +17,7 @@ func GeneratePrivateKey() (ed25519.PrivateKey, error) {
 	return privKey, nil
 }
 
+
 func EncodePrivateKey(privKey []byte) string {
 	return base58.Encode(privKey)
 }
