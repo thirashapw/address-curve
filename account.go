@@ -9,6 +9,7 @@ import (
 type Account struct {
 	PrivateKey string
 	PublicKey  string
+	Address    string
 }
 
 func CreateAccount() (*Account, error) {
@@ -21,7 +22,8 @@ func CreateAccount() (*Account, error) {
 
 	return &Account{
 		PrivateKey: EncodePrivateKey(privKey),
-		PublicKey:  PublicKeyToAddress(merkleRoot),
+		PublicKey:  fmt.Sprintf("%x", merkleRoot),
+		Address:    PublicKeyToAddress(merkleRoot),
 	}, nil
 }
 
@@ -39,6 +41,7 @@ func ComputeAddress(encodedPrivKey string) (*Account, error) {
 
 	return &Account{
 		PrivateKey: encodedPrivKey,
-		PublicKey:  publicKey,
+		PublicKey:  fmt.Sprintf("%x", merkleRoot),
+		Address:    publicKey,
 	}, nil
 }

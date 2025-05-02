@@ -13,4 +13,5 @@ func TestFromPrivateKey(t *testing.T) {
 	}
 	t.Logf("private key loaded successfully: %s", account.PrivateKey)
 	t.Logf("public key loaded successfully: %s", account.PublicKey)
+	t.Logf("address loaded successfully: %s", account.Address)
 }

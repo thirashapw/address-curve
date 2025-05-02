@@ -13,4 +13,5 @@ func TestNewAccount(t *testing.T) {
 	}
 	t.Logf("private key generated successfully: %s", account.PrivateKey)
 	t.Logf("public key generated successfully: %s", account.PublicKey)
+	t.Logf("address generated successfully: %s", account.Address)
 }
