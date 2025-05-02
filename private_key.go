@@ -4,6 +4,8 @@ import (
 	"crypto/ed25519"
 	"crypto/rand"
 	"fmt"
+
+	"github.com/btcsuite/btcutil/base58"
 )
 
 func GeneratePrivateKey() (ed25519.PrivateKey, error) {
@@ -13,4 +15,8 @@ func GeneratePrivateKey() (ed25519.PrivateKey, error) {
 		return nil, fmt.Errorf("failed to generate private key: %w", err)
 	}
 	return privKey, nil
+}
+
+func EncodePrivateKey(privKey []byte) string {
+	return base58.Encode(privKey)
 }
