@@ -7,7 +7,7 @@ import (
 )
 
 func TestFromPrivateKey(t *testing.T) {
-	account, err := address_curve.ComputeAddress("JDTkLBfvFK26KN7D54cvkre1qmiDGT8WZfMU4SVUn8oVmkyQ8rZQ5R46gYLYLTDjeRDm7HLzWD71Lm7DVQ")
+	account, err := address_curve.ComputeAddress("8FnBwL2YGEvKsLyzNBUiSfkVZMiWPr4LhVpyvE5pbCBjWE72CUnoEA2aYqx5fcsQvdCcUqhSvJKFfytA7T")
 	if err != nil {
 		t.Fatalf("failed to generate private key: %v", err)
 	}
