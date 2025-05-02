@@ -27,8 +27,8 @@ func CreateAccount() (*Account, error) {
 
 func ComputeAddress(encodedPrivKey string) (*Account, error) {
 	privKey := base58.Decode(encodedPrivKey)
-	if len(privKey) != 60 {
-		return nil, fmt.Errorf("invalid private key length: expected 60 bytes, got %d", len(privKey))
+	if len(privKey) != 64 {
+		return nil, fmt.Errorf("invalid private key length: expected 64 bytes, got %d", len(privKey))
 	}
 
 	leaves := deriveLeafNodes(privKey)
