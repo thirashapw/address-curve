@@ -15,7 +15,7 @@ type Account struct {
 // CreateAccount generates a new account with a private key, public key, and address.
 // It uses the Ed25519 algorithm to generate a private key and derives the public key and address from it.
 func CreateAccount() (*Account, error) {
-	privKey, err := GeneratePrivateKey()
+	privKey, err := generatePrivateKey()
 	if err != nil {
 		return nil, err
 	}
