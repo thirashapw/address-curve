@@ -11,7 +11,7 @@ func TestNewAccount(t *testing.T) {
 	if err != nil {
 		t.Fatalf("failed to generate private key: %v", err)
 	}
-	t.Logf("private key generated successfully: %s", account.PrivateKey)
-	t.Logf("public key generated successfully: %s", account.PublicKey)
-	t.Logf("address generated successfully: %s", account.Address)
+	t.Logf("private key fresh generated successfully: %s", account.PrivateKey)
+	t.Logf("public key fresh generated successfully: %s", account.PublicKey)
+	t.Logf("address fresh generated successfully: %s", account.Address)
 }
