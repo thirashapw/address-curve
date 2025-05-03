@@ -25,3 +25,38 @@ Build Merkle Tree (pairwise SHA3 hashing)
 Leaf1 Leaf2         Leaf3  Leaf4
 ... and so on up from 512 leaves
 ```
+
+## Example
+```bash
+account, err := address_curve.CreateAccount()  
+if err != nil {  
+    return fmt.Errorf("failed to generate private key: %v", err)  
+}  
+
+accountInfo := fmt.Sprintf(  
+    "private key generated successfully: %s\n"+  
+    "public key generated successfully: %s\n"+  
+    "address generated successfully: %s",  
+    account.PrivateKey,  
+    account.PublicKey,  
+    account.Address,  
+)  
+
+```
+
+
+```bash
+loaded_account, err := address_curve.ComputeAddress(account.PrivateKey)  
+if err != nil {  
+    return fmt.Errorf("failed to compute private key: %v", err)  
+}  
+
+loadedInfo := fmt.Sprintf(  
+    "private key loaded successfully: %s\n"+  
+    "public key loaded successfully: %s\n"+  
+    "address loaded successfully: %s",  
+    loaded_account.PrivateKey,  
+    loaded_account.PublicKey,  
+    loaded_account.Address,  
+)  
+```
