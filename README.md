@@ -42,8 +42,11 @@ accountInfo := fmt.Sprintf(
     account.Address,  
 )  
 
-```
+// private key generated successfully: 67FdSe6bqYdjdyoQEdbkBacYjjq25X5G6F72iq83fSQUgSW9n7tCAcyXxvMTRdXq7D3s4w6zaui2J6tisHmtrj44
+// public key generated successfully: d0f981f14b1f8941adffecd2ce3c7430afa12131265a1d452069e43dcd9e90d2
+// address generated successfully: F5kvEif4eSoJcbWvTEJJEMqwYqDDDwEXiPubsbAVhaW8
 
+```
 
 ```bash
 loaded_account, err := address_curve.ComputeAddress(account.PrivateKey)  
